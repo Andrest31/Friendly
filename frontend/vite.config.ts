@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths(), basicSsl()],
   server: {
     allowedHosts: true,
-    host: "0.0.0.0",
+    host: true, 
     port: 5173,
     strictPort: true,
   },

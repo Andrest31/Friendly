@@ -1,0 +1,21 @@
+.progressBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  gap: 0.5rem;
+}
+
+.progressBarItem {
+  height: 1rem;
+  width: 100%;
+  background-color: #d77a7a;
+  border-radius: 1rem;
+}
+
+.progressBarItemActive {
+  height: 1rem;
+  width: 100%;
+  background-color: #75db71;
+  border-radius: 1rem;
+}

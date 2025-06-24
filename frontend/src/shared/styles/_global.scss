@@ -1,0 +1,82 @@
+// global.scss - Base styles for project
+
+@use "./variables" as vars;
+@use "./reset";
+
+// Base styles for tags
+body {
+  min-width: 100dvw;
+  min-height: 100dvh;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: vars.$background-color;
+  color: vars.$text-color;
+  font-family: vars.$main-font;
+  font-size: 16px;
+  font-weight: 300;
+  overflow: hidden;
+  will-change: transform;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+// Basic helper classes
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// Basic styles for components
+
+button {
+  padding: 10px 20px;
+  background-color: vars.$primary-color;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: vars.$primary-color;
+  }
+}
+
+// Media
+@media (max-width: vars.$breakpoint-tablet) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: vars.$breakpoint-mobile) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+}

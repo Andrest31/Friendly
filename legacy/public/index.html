@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>friendly</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link media="screen" rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <section id="registration" class="page registration container">
+          <div class="registration-content">
+            <div class="registration-top">
+              <img class="logo" src="assets/svg/logo.svg" alt="logo">
+            </div>
+            <h2 class="registration-title">
+              Добро пожаловать!
+            </h2>
+            <div class="registration-bottom">
+              <button class="confirm-button">Начать</button>
+              <div class="registration-info">
+                <a class="buttonTerms" onclick="goToPage('terms')">Правила сервиса</a>
+                <a href="https://t.me/+3kr3Xm7rS81hMDIy" target="_blank">О нас</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="home" class="page main container">
+          <div class="main-header">
+            <input class="main-input" type="text" placeholder="Поиск">
+            <button class="button-filter">
+              <img src="assets/svg/filter.svg" alt="icon-filter">
+            </button>
+          </div>
+
+          <div class="main-card">
+            <div class="main-card__top">
+              <img id="main-card-img" class="main-card__img" src="assets/img/user-avatar.jpg" alt="avatar">
+            </div>
+            <div class="main-card__top-text">
+              <p class="main-card__top-title">Александра</p>
+              <div class="main-card__content">
+                <svg width="17" height="18" viewBox="0 0 17 18" fill="none" stroke="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 9L4.099 12.5089H4.10827C4.20436 13.7489 6.20022 14.7411 8.65422 14.7411C11.1082 14.7411 13.1041 13.75 13.2002 12.5089H13.2092L13.2002 9L8.5 11L4 9Z" stroke-width="0.85" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M16.4556 7.23359L8.50017 11.2079L0.544189 7.23359L8.50017 3.25928L16.4556 7.23359Z" stroke-width="0.85" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M0.544434 12.7839V7.54785" stroke-width="0.85" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="main-card__top-subtitle">ФТМИ</p>
+              </div>
+            </div>
+            <div class="main-card__bottom">
+              <p class="main-card__bottom-title">Обо мне</p>
+              <p class="main-card__bottom-text"></p>
+            </div>
+          </div> 
+          <p class="no-users-message">Сейчас здесь никого нет,<br>приходите позже.</p>
+          
+          <div class="main-buttons">
+            <button class="button-cancel">
+              <img src="assets/svg/cross.svg" alt="cross">
+            </button>
+            <button class="button-like">
+              <img src="assets/svg/heart.svg" alt="heart">
+            </button>
+          </div>
+        </section>
+
+        <section id="match" class="page match container">
+          <h1>Мэтчи</h1>
+          <div class="match-content">
+
+            <!-- <div class="match-card">
+              <div class="match-card__left">
+                <img class="match-img" src="assets/img/user-avatar.jpg" alt="avatar">
+                <div class="match-text">
+                  <p class="match-title">Александра</p>
+                  <p class="match-subtitle">@nickname</p>
+                </div>
+              </div>
+              <button class="message-button">
+                <img class="match-icon" src="assets/svg/message.svg" alt="message">
+              </button>
+            </div> -->
+
+          </div>
+        </section>
+
+        <section id="profile" class="page profile container">
+          <div class="profile-top">
+            <h1>Ваш профиль</h1>
+            <button class="profile-delete-button">
+              <img src="assets/svg/delete.svg" alt="icon-delete">
+            </button>
+            <div class="overlay"></div>
+              <div class="popup">
+                <p>Вы уверены, что хотите удалить аккаунт?</p>
+                <div class="popup-buttons">
+                    <button class="popup-button confirm">Удалить</button>
+                    <button class="popup-button cancel">Отмена</button>
+                </div>
+            </div>
+          </div>
+            
+          <div class="profile-container">
+            <div class="profile-item">
+
+              <img id="profile-item-img" class="profile-item__img" src="assets/img/user-avatar.jpg" alt="avatar">
+            </div>
+            <button class="button-edit">Сменить фото</button>
+            <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+          </div>
+            <form>
+              <div class="profile-form__line name-input">
+                <label for="faculty">Имя</label>
+                <input type="text" id="name" name="name" class="profile-form__input">
+              </div>
+              </div>
+              <div class="profile-form__line">
+                <label for="faculty">Мегафакультет</label>
+                <select id="faculty" class="profile-form__select">
+                  <option value="0" selected>Выберите факультет</option>
+                  <option value="1">КТУ</option>
+                  <option value="2">ФТМИ</option>
+                  <option value="3">ФТ</option>
+                  <option value="4">ТИТ</option>
+                  <option value="5">НОЖ</option>
+                </select>
+              </div>
+              <div class="profile-form__line">
+                <label for="about">Обо мне</label>
+                <textarea id="about" class="profile-form__textarea" maxlength="345"></textarea>
+                <p class="profile-form__text">Доступно символов: <span id="char-count">0</span></p>
+              </div>
+            </form>
+            <button class="confirm-button">Сохранить</button>
+            <div class="registration-info">
+              <a class="buttonTerms" onclick="goToPage('terms')">Правила сервиса</a>
+              <a href="https://t.me/+3kr3Xm7rS81hMDIy" target="_blank">О нас</a>
+            </div>
+            
+            <!-- <button class="button-reset" style="margin-top: 50px; color: red; font-size: 20px;">Сбросить</button> -->
+        </section>
+
+        <section id="terms-of-use" class="page terms container">
+          <button id="backButton" class="backButton-top" onclick="reloadPage()">Назад</button>
+
+          <h1>Правила пользования приложением friendly</h1>
+          <p>Добро пожаловать в friendly! Мы стремимся обеспечить безопасную и приятную среду для всех пользователей. Перед использованием нашего приложения, пожалуйста, ознакомьтесь с правилами и условиями.</p>
+        
+          <article id="general-provisions">
+            <h2>1. Основные положения</h2>
+            <ol>
+              <li>Регистрация в приложении означает, что вы согласны с настоящими правилами.</li>
+              <li>Используя приложение, вы подтверждаете, что вам исполнилось 18 лет (или иной возрастной порог, установленный законом вашей страны).</li>
+              <li>Администрация приложения оставляет за собой право изменять правила в любое время. Уведомления о таких изменениях будут публиковаться в приложении.</li>
+            </ol>
+          </article>
+        
+          <article id="account-registration">
+            <h2>2. Регистрация и учётная запись</h2>
+            <ol>
+              <li>Для использования friendly необходимо создать личную учётную запись.</li>
+              <li>Вы обязуетесь предоставлять только точную, актуальную и достоверную информацию о себе.</li>
+              <li>Вы несёте ответственность за сохранность ваших данных для входа в приложение и не должны передавать их третьим лицам.</li>
+              <li>Администрация оставляет за собой право блокировать или удалять учётные записи в случае нарушения правил.</li>
+            </ol>
+          </article>
+        
+          <article id="app-usage">
+            <h2>3. Использование приложения</h2>
+            <ol>
+              <li>Вы обязуетесь использовать приложение только в законных и этичных целях.</li>
+              <li>Запрещены:
+                <ul>
+                  <li>Оскорбления, угрозы, проявление ненависти или дискриминации.</li>
+                  <li>Публикация непристойного, порнографического или агрессивного контента.</li>
+                  <li>Распространение спама, мошенничества или рекламных материалов без разрешения.</li>
+                </ul>
+              </li>
+              <li>Пользователи обязаны уважать друг друга и не использовать приложение для злоупотреблений.</li>
+            </ol>
+          </article>
+        
+          <article id="privacy">
+            <h2>4. Конфиденциальность</h2>
+            <ol>
+              <li>friendly соблюдает правила конфиденциальности и защищает персональные данные пользователей.</li>
+              <li>Пользователь несёт ответственность за конфиденциальность данных, которыми он делится через приложение.</li>
+              <li>Мы не передаём ваши данные третьим лицам без вашего согласия, за исключением случаев, предусмотренных законом.</li>
+            </ol>
+          </article>
+        
+          <article id="user-responsibility">
+            <h2>5. Ответственность пользователей</h2>
+            <ol>
+              <li>Пользователь несёт ответственность за все действия, совершённые с его аккаунта.</li>
+              <li>friendly не несёт ответственности за действия пользователей, включая их сообщения, публикации или нарушения закона.</li>
+              <li>В случае нарушения правил ваш аккаунт может быть заблокирован или удалён без предварительного уведомления.</li>
+            </ol>
+          </article>
+        
+          <article id="dispute-resolution">
+            <h2>6. Решение споров</h2>
+            <ol>
+              <li>В случае конфликтных ситуаций вы можете обратиться в службу поддержки через приложение.</li>
+              <li>Администрация будет рассматривать жалобы и претензии в разумные сроки.</li>
+              <li>Споры, не разрешённые внутри приложения, могут быть переданы на рассмотрение в судебные органы по месту регистрации friendly.</li>
+            </ol>
+          </article>
+        
+          <article id="final-provisions">
+            <h2>7. Заключительные положения</h2>
+            <ol>
+              <li>Используя приложение, вы подтверждаете, что ознакомились с настоящими правилами и принимаете их.</li>
+              <li>Если вы не согласны с правилами, пожалуйста, прекратите использование приложения.</li>
+            </ol>
+          </article>
+          <button id="backButton" class="backButton" onclick="reloadPage()">Назад</button>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+              <button id="homeBtn" class="footer-button" onclick="goToPage('home')">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon" d="M0 26V18.7273V12.2703C0 11.0126 0.591497 9.82821 1.5969 9.07263L12.5969 0.805966C14.0204 -0.263804 15.9796 -0.263806 17.4031 0.805963L28.4031 9.07263C29.4085 9.82821 30 11.0126 30 12.2703V26C30 28.2091 28.2091 30 26 30H22C19.7909 30 18 28.2091 18 26V23.1364C18 21.4795 16.6569 20.1364 15 20.1364C13.3431 20.1364 12 21.4795 12 23.1364V26C12 28.2091 10.2091 30 8 30H4C1.79086 30 0 28.2091 0 26Z" fill="#5B5B5B"/>
+                </svg>
+                <span id="homeBadge" class="badge" style="display: none;"></span>
+              </button>
+              <button id="matchBtn" class="footer-button" onclick="goToPage('match')">
+                <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon" d="M19.4621 28.5655C22.7306 25.6447 27.4474 21.0719 29.413 17.4148C30.8837 14.6826 31.3622 11.2976 30.7225 8.15035C29.3557 0.981118 21.7872 -1.9484 17.0728 2.85599C16.8077 3.12441 16.5632 3.42197 16.3124 3.72752V3.72752C16.15 3.92538 15.8501 3.92537 15.6877 3.72751V3.72751C15.4368 3.42197 15.1924 3.12441 14.9272 2.85599C10.2128 -1.9484 2.64428 0.981118 1.2775 8.15035C0.637791 11.2976 1.11628 14.6826 2.58707 17.4148C4.55263 21.0719 9.26941 25.6447 12.5379 28.5655V28.5655C14.4993 30.3187 17.5007 30.3187 19.4621 28.5655V28.5655Z" fill="#5B5B5B"/>
+                </svg>     
+                <span id="matchBadge" class="badge" style="display: none;"></span>                        
+              </button>
+              <button id="profileBtn" class="footer-button" onclick="goToPage('profile')">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon" fill-rule="evenodd" clip-rule="evenodd" d="M14.8081 0C10.54 0 7.08005 3.45997 7.08005 7.72809C7.08005 11.9962 10.54 15.4562 14.8081 15.4562C19.0762 15.4562 22.5362 11.9962 22.5362 7.72809C22.5362 3.45997 19.0762 0 14.8081 0ZM11.368 17.3403C6.9674 17.3403 3.39999 20.5152 3.39999 24.4314C3.39999 27.5067 6.20123 29.9997 9.65674 29.9997H20.352C23.8076 29.9997 26.6088 27.5067 26.6088 24.4314C26.6088 20.5152 23.0414 17.3403 18.6408 17.3403H11.368Z" fill="#5B5B5B"/>
+                </svg>
+              </button>
+            </div>
+        </div>
+    </footer>  
+    
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+stages:
+  - deploy
+
+deploy:
+  tags:
+    - deploy
+  stage: deploy
+  script:
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H vps1737723460.tech0.ru >> ~/.ssh/known_hosts
+    - ssh root@vps1737723460.tech0.ru "cd /var/www/friendly && ./deploy.sh"
+  only:
+    - master
